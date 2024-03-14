@@ -46,7 +46,8 @@ public class Paiement {
     }
     public Paiement() {
     }
-    public Paiement(Date datePaiement, double montant, CoordonneesBancaires coordonneesBancaires) {
+    public Paiement(Long id, Date datePaiement, double montant, CoordonneesBancaires coordonneesBancaires) {
+        this.id = id;
         this.datePaiement = datePaiement;
         this.montant = montant;
         this.coordonneesBancaires = coordonneesBancaires;
@@ -56,6 +57,8 @@ public class Paiement {
         return "Paiement [id=" + id + ", datePaiement=" + datePaiement + ", montant=" + montant
                 + ", coordonneesBancaires=" + coordonneesBancaires + "]";
     }
+    
+    
 
     
 

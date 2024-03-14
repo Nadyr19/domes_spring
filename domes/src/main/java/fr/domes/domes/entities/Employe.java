@@ -2,15 +2,17 @@ package fr.domes.domes.entities;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Entity;
 
 
 @Entity
 public class Employe extends Personne {
 
-    
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateEntree;
-   
+    
     public Date getDateEntree() {
         return dateEntree;
     }
@@ -20,17 +22,15 @@ public class Employe extends Personne {
     
     public Employe() {
     }
-    public Employe(Date dateEntree) {
-        this.dateEntree = dateEntree;
-    }
-    public Employe(String nom, String prenom, java.sql.Date dateNaissance, Date dateEntree) {
-        super(nom, prenom, dateNaissance);
+    public Employe(Long id, String nom, String prenom, Date dateNaissance, Date dateEntree) {
+        super(id, nom, prenom, dateNaissance);
         this.dateEntree = dateEntree;
     }
     @Override
     public String toString() {
         return "Employe [dateEntree=" + dateEntree + "]";
     }
+    
     
 
 

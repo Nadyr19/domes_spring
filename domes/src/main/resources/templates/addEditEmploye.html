@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add/Edit Employe</title>
+  </head>
+  <body>
+    <h2>Add/Edit Employe</h2>
+    <form
+      th:action="@{/saveemploye}"
+      th:object="${addeditemployes}"
+      method="post"
+    >
+      <input type="hidden" th:field="*{id}" />
+      <label for="Nom">Nom:</label>
+      <input type="text" th:field="*{nom}" />
+      <br />
+      <label for="prenom">Prénom:</label>
+      <input type="text" th:field="*{prenom}" />
+      <br />
+
+      <div class="form-group">
+        <label for="dateNaissance">Date de Naissance:</label>
+        <input
+          type="date" th:field="*{dateNaissance}" class="form-control" placeholder="yyyy-MM-dd" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="dateEntree">Date d'entrée:</label>
+        <input
+          type="date" th:field="*{dateEntree}" class="form-control" placeholder="yyyy-MM-dd" required />
+      </div>
+    
+      <button type="submit">Save</button>
+    </form>
+    <a th:href="@{/listemploye}">Back to List</a>
+  </body>
+</html>

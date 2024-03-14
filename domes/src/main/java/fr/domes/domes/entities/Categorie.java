@@ -32,15 +32,24 @@ public class Categorie {
     public void setNomCategorie(String nomCategorie) {
         this.nomCategorie = nomCategorie;
     }
+    public Collection<Produit> getProduit() {
+        return produit;
+    }
+    public void setProduit(Collection<Produit> produit) {
+        this.produit = produit;
+    }
     public Categorie() {
     }
-    public Categorie(String nomCategorie) {
+    public Categorie(Long id, String nomCategorie, Collection<Produit> produit) {
+        this.id = id;
         this.nomCategorie = nomCategorie;
+        this.produit = produit;
     }
     @Override
     public String toString() {
-        return "Categorie [id=" + id + ", nomCategorie=" + nomCategorie + "]";
+        return "Categorie [id=" + id + ", nomCategorie=" + nomCategorie + ", produit=" + produit + "]";
     }
 
+    
     
 }

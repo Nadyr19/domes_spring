@@ -9,6 +9,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+//import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 
@@ -24,7 +25,9 @@ public class Commande {
     @ManyToOne
     private Client client;
 
+
     @ManyToMany(mappedBy= "commande", fetch = FetchType.EAGER)
+    //@JoinTable(name = "Ligne_de_commande")
     private Collection <Article> article = new ArrayList<>();
     
     public Long getId() {
@@ -45,11 +48,22 @@ public class Commande {
     public void setDateExpedition(Date dateExpedition) {
         this.dateExpedition = dateExpedition;
     }
+    public Client getClient() {
+        return client;
+    }
+    public void setClient(Client client) {
+        this.client = client;
+    }
+    public Collection<Article> getArticle() {
+        return article;
+    }
+    public void setArticle(Collection<Article> article) {
+        this.article = article;
+    }
+
+
     public Commande() {
     }
-    
-  
-    
   
     public Commande(Long id, Date dateCommande, Date dateExpedition) {
         this.id = id;

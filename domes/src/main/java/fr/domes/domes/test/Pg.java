@@ -1,15 +1,16 @@
 package fr.domes.domes.test;
 
+/* 
 import fr.domes.domes.controller.ClientController;
 
-/* 
+ 
 import java.sql.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-*/
+
 
 import fr.domes.domes.entities.Adresse;
 import fr.domes.domes.entities.Client;
@@ -39,7 +40,7 @@ public class Pg {
         Date d1 = formatter.parse("31/03/2015");  
         System.out.println("Date is: "+d1);  
     } catch (ParseException e) {e.printStackTrace();}  
-    */ 
+    
 
 
     SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");   
@@ -50,7 +51,7 @@ public class Pg {
 
 
 
-        /* 
+        
 
          Date date = new Date();  
     SimpleDateFormat d1 = new SimpleDateFormat("02/05/2020");  
@@ -73,7 +74,7 @@ DateFormat dFormat = DateFormat.getDateInstance(DateFormat.SHORT);
 String str = dFormat.format(d);  
 System.out.println(str);  
 }  
-*/
+
 
 
 
@@ -128,7 +129,7 @@ System.out.println(str);
 
 
 
-    /* 
+    
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM d, yyyy");
    Calendar calendar = new GregorianCalendar(2017, Calendar.JANUARY , 25);
    Calendar date1 = new GregorianCalendar(2023, Calendar.JANUARY, 20);
@@ -141,7 +142,9 @@ System.out.println(str);
 
 
    
-*/
+
 
     }
 }    
+
+*/

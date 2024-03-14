@@ -1,6 +1,5 @@
 package fr.domes.domes.entities;
 
-import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -59,18 +58,34 @@ public class Client extends Personne {
 
     public Client() {
     }
-
-    public Client(String nom, String prenom, Date dateNaissance) {
-        super(nom, prenom, dateNaissance);
-    }
-
-    public Client(String nom, String prenom, Date dateNaissance, String numTel, Adresse adresse,
-    Collection<Commande> commande,  Login login) {
-        super(nom, prenom, dateNaissance);
+    
+    /* 
+    public Client(String numTel, Adresse adresse, Collection<Commande> commande, Login login) {
         this.numTel = numTel;
         this.adresse = adresse;
         this.commande = commande;
         this.login = login;
     }
+
+*/
+
+    public Client(Long id, String nom, String prenom, java.util.Date dateNaissance, String numTel, Adresse adresse,
+            Collection<Commande> commande, Login login) {
+        super(id, nom, prenom, dateNaissance);
+        this.numTel = numTel;
+        this.adresse = adresse;
+        this.commande = commande;
+        this.login = login;
+    }
+
+    @Override
+    public String toString() {
+        return "Client [numTel=" + numTel + ", adresse=" + adresse + ", commande=" + commande + ", login=" + login
+                + "]";
+    }
+
+    
+
+   
 
 }

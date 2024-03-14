@@ -49,7 +49,7 @@ public class CoordonneesBancaires {
     public String getNomTitulaireCarte() {
         return nomTitulaireCarte;
     }
-
+    
     public void setNomTitulaireCarte(String nomTitulaireCarte) {
         this.nomTitulaireCarte = nomTitulaireCarte;
     }
@@ -62,6 +62,9 @@ public class CoordonneesBancaires {
         this.paiement = paiement;
     }
 
+    
+
+    
     public CoordonneesBancaires() {
     }
 

@@ -2,6 +2,8 @@ package fr.domes.domes.entities;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,7 @@ public abstract class Personne {
     private Long id;
     private String nom;
     private String prenom;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateNaissance;
 
 
@@ -59,11 +62,15 @@ public abstract class Personne {
     public Personne() {
     }
     
-    public Personne(String nom, String prenom, Date dateNaissance) {
+   
+    
+    public Personne(Long id, String nom, String prenom, Date dateNaissance) {
+        this.id = id;
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
     }
+
     @Override
     public String toString() {
         return "Personne [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance

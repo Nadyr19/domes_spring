@@ -53,14 +53,18 @@ public class Login {
     public Login() {
     }
 
-    public Login(String email, String password) {
+    public Login(Long id, String email, String password, Client client) {
+        this.id = id;
         this.email = email;
         this.password = password;
+        this.client = client;
     }
 
     @Override
     public String toString() {
-        return "Login [identifiant=" + email + ", password=" + password + "]";
+        return "Login [id=" + id + ", email=" + email + ", password=" + password + ", client=" + client + "]";
     }
+
+    
 
 }
